@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Occupations</title>
+  </head>
+  <body>
+    <table>
+      <th>Job Class</th><th>Percentage</th>
+      {% for row in input %}
+        <tr>
+        {% for item in row %}
+          <td> {{item}} </td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
