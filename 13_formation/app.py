@@ -6,13 +6,12 @@ def hello_world():
     print(app)
     return render_template("input.html")
 
-@app.route("/auth")
+@app.route("/auth", methods=['POST'])
 def authenticate():
     print(app)
     print(request)
-    print(request.args)
-    return render_template("auth.html",username = request.args["username"],
-                               reqMethod = request.args["sub1"])
+    return render_template("auth.html",username = request.form["username"],
+                               reqMethod = request.method)
 
 if __name__ == "__main__":
     app.debug = True
