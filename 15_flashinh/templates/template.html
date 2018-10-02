@@ -8,7 +8,7 @@ K 15: Oh yes, perhaps I do…
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{% block title %}{% endblock %} - KateLin's Site</title>
+  <title>{% block title %}{% endblock %}KateLin's Site</title>
 <link rel="stylesheet" type="text/css" href="static/mystyle.css">
 </head>
 
@@ -33,4 +33,9 @@ K 15: Oh yes, perhaps I do…
 {% endfor %}
 {% endblock %}
 </body>
+<footer>
+  {% block footer %}
+    <center> &copy; KateLin </center>
+  {% endblock %}
+</footer>
 </html>
