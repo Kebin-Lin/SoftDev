@@ -1,0 +1,36 @@
+<!--
+Team KateLin
+Kaitlin Wan + Kevin Lin
+SoftDev1 pd6
+K 15: Oh yes, perhaps I do…
+2018-10-03
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %} - KateLin's Site</title>
+<link rel="stylesheet" type="text/css" href="static/mystyle.css">
+</head>
+
+<body>
+  {% block body %}
+<center>
+<h1>Welcome to KateLin's Website!</h1>
+<center>
+<h2>Please login below</h2>
+    <form action="/">
+      <input type="text" name="user" placeholder="Username">
+      <input type="text" name="pass" placeholder="Password">
+      <br><br>
+      <input type="submit" value="Submit!" />
+    </form>
+</center>
+<br>
+
+{% set msgs = get_flashed_messages() %}
+{% for each in msgs%}
+    {{each}}
+{% endfor %}
+{% endblock %}
+</body>
+</html>
