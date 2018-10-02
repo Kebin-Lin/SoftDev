@@ -1,0 +1,7 @@
+1. Login HTML
+2. Error HTML
+3. Python:
+      - Checks credentials (username + password)
+          - iF good then give welcome ( need logout button)
+          - if bad then error
+      - Stores username in a session
