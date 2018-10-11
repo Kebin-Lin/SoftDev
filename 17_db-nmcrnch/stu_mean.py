@@ -21,7 +21,7 @@ for row in c.execute("SELECT * FROM students"): #Goes through all rows in table 
 c.execute("CREATE TABLE peeps_avg(id INTEGER, avg REAL)") #Create new table for averages
 
 for studentid in students.keys(): #Goes through all student ids
-    for row in c.execute("SELECT mark FROM grades WHERE grades.id = {0}".format(studentid)):
+    for row in c.execute("SELECT mark FROM grades WHERE grades.id = ?",(studentid,)):
         students[studentid]['grades'].append(row[0]) #Adds each mark for each id to a list for the student
 
     lst = students[studentid]['grades']
@@ -29,7 +29,7 @@ for studentid in students.keys(): #Goes through all student ids
     students[studentid]['grades'] = str(avg) #Stores avg as a string in the dictionary
     print(students[studentid]['name'] + ' ' + students[studentid]['grades']) #Print sudent name and average
 
-    c.execute("INSERT INTO peeps_avg VALUES({0}, {1})".format(studentid, avg)) #Inserts values into peeps_avg
+    c.execute("INSERT INTO peeps_avg VALUES(?, ?)",(studentid, avg,)) #Inserts values into peeps_avg
 
 db.commit()
 db.close()
