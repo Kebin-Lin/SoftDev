@@ -1,0 +1,53 @@
+/*
+Kevin Lin, Mohammad Uddin
+SoftDev1 Pd6
+K20 -- Comic Sans Syndrome
+2018-11-05
+*/
+
+body {
+  background-color: #666666;
+  font-family: Arial;
+}
+
+ul {
+  padding: 0;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.contentbox {
+  background-color: #757575;
+}
+
+h1 {
+  background-color: #BDBDBD;
+  color: white;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  margin-top: -30px;
+}
+
+.leftCol {
+  margin-left: 10px;
+  flex: 10%;
+}
+
+.rightCol {
+  flex: 90%;
+}
+
+.copyright {
+  background-color: #575757;
+  padding: 10px;
+  color: #6E7575;
+  text-align: right;
+}
