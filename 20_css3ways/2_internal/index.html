@@ -1,26 +1,83 @@
 <!DOCTYPE html>
-<!-- WORK FILE for CSS --> 
+<!-- WORK FILE for CSS 
+Kevin Lin, Mohammed Uddin
+SoftDev1 Pd6
+K20 -- Comic Sans Syndrome
+2018-11-05
+-->
 
 <html>
   <head>
+    <style>
+      body {
+        background-color: #666666;
+        font-family: Arial;
+      }
+      ul {
+        padding: 0;
+        font-weight: bold;
+        list-style-type: none;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .contentbox {
+        background-color: #757575;
+      }
+      h1 {
+        background-color: #BDBDBD;
+        color: white;
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        margin-top: -30px;
+      }
+      .leftCol {
+        margin-left: 10px;
+        flex: 10%;
+      }
+      .rightCol {
+        flex: 90%;
+      }
+      .copyright {
+        background-color: #575757;
+        padding: 10px;
+        color: #6E7575;
+        text-align: right;
+      }
+    </style>
+
     <title>foo title</title>
   </head>
 
   <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+    <div class="contentbox">
+      <h1>foo heading 1</h1>
+      <div class="row">
+        <div class="leftCol">
+          <h3>nav foo</h3>
+          <ul>
+            <li><a href="">dis</a></li>
+            <li><a href="">dat</a></li>
+            <li><a href="">de udda ting</a></li>
+          </ul>
+        </div>
 
-      <br>
-      <br>
-
-      Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+        <div class="rightCol">
+          <h2>main foo heading</h2>
+          <p>
+            Bacon ipsum dolor amet fatback brisket leberkas tail ground round sausage. Chicken pork landjaeger picanha shank. Corned beef chicken ham hock drumstick bresaola venison. Short ribs hamburger ribeye cow jowl. Pig turducken rump short loin.
+            <br><br>
+            Salami ball tip pastrami ham hock pork belly kevin filet mignon tongue prosciutto boudin. Venison pork filet mignon, alcatra ham t-bone frankfurter kevin. Cupim leberkas landjaeger rump strip steak, pastrami tail shank ball tip beef ribs pork belly. Cow doner biltong shankle pork belly landjaeger ham hock. Meatball landjaeger sirloin shankle beef ribs doner. Doner tri-tip capicola chicken, filet mignon pork chop bacon beef buffalo shoulder tenderloin turkey frankfurter shankle. Leberkas burgdoggen pastrami jerky filet mignon meatloaf.
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright &copy; 2016 Clyde "Thluffy" Sinclair
+      </div>
+    </div>
 
   </body>
 
