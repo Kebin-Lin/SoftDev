@@ -1,0 +1,131 @@
+<!doctype html>
+<!--
+Kevin Lin, Mohammed Uddin
+SoftDev1 Pd6
+K21 -- Who Does Frame Work For?
+2018-11-08
+-->
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo for Foundation</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="primary callout">
+            This is a 12 cell. It occupies 12 twelfths of the row.
+          </div>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="large-6 cell">
+          <div class="primary callout">
+            This is a 6 cell. It occupies half the space of a 12 cell. That is 6 twelfths of the row.
+          </div>
+        </div>
+        <div class="large-4 cell">
+          <div class="primary callout">
+            This is 4 cell. One third of 12 cell. 4 twelfths.
+          </div>
+        </div>
+        <div class="large-2 cell">
+          <div class="primary callout">
+            2 cell. One sixth. 2 twelfths.
+          </div>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="large-8 cell">
+          <div class="callout">
+            You can have cells in cells.<br>
+            <div class="grid-x grid-padding-x">
+              <div class="large-3 cell">
+                <div class="primary callout">
+                  This is a 3 cell in a 8 cell. 3/12 of an 8 cell.
+                </div>
+              </div>
+              <div class="auto cell">
+                <div class="primary callout">
+                  This an auto cell. It fills the rest of the row. It is 9/12 of an 8 cell.
+                </div>
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="auto cell">
+                <div class="primary callout">
+                  This a new row. It is filled by an auto cell. It is 8/12 of an 8 cell.
+                </div>
+              </div>
+            </div>
+            The boxes around the cells are callouts, and you can fill them with a color.
+            <div class="grid-x grid-padding-x">
+              <div class="auto cell">
+                <div class="callout secondary">
+                  This is the secondary color.
+                </div>
+              </div>
+              <div class="auto cell">
+                Callouts are not neccessary.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auto cell">
+          <div class="callout">
+            <h1>TATER TOTS</h1>
+            This is another auto cell.
+          </div>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="callout">
+            <h4>Foundation also makes your forms look nice</h4>
+            <form>
+              <div class="grid-x grid-padding-x">
+                <div class="large-6 cell">
+                  <label>Text input</label>
+                  <input type="text" placeholder="This is what your inputs look like now!"/>
+                </div>
+                <div class="large-6 cell">
+                  <label>You can also put endings on your inputs</label>
+                  <div class="input-group">
+                    <input type="text" placeholder="Cool stuff" class="input-group-field" />
+                    <span class="input-group-label">is cool</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-x grid-padding-x">
+                <div class="large-6 cell">
+                  <label>Here's a dropdown</label>
+                  <select>
+                    <option value="Red">Red</option>
+                    <option value="Red">Orange</option>
+                    <option value="Red">Yellow</option>
+                    <option value="Red">Green</option>
+                    <option value="Red">Blue</option>
+                    <option value="Red">Purple</option>
+                  </select>
+                </div>
+                <div class="large-6 cell">
+                  <label>Buttons are just "a" tags with a button class!</label>
+                  <a class="button">Cool right?</a>
+                  <a class="alert button">Different</a>
+                  <a class="success button">Colors</a>
+                  <a class="secondary button">Too!</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
