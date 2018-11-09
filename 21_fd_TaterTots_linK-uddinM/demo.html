@@ -14,11 +14,27 @@ K21 -- Who Does Frame Work For?
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.min.css">
   </head>
   <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Navbar</li>
+          <li><a href="#grid-demo">Grid link</a></li>
+          <li class="menu-text">just text</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li> <input type="search" placeholder="Search text"> </li>
+          <li> <button type="button" class="button">Search button</button></li>
+        </ul>
+      </div>
+    </div>
     <div class="grid-container">
-      <div class="grid-x grid-padding-x">
+      <br>
+      <div class="grid-x grid-padding-x" id="grid-demo">
         <div class="large-12 cell">
           <div class="primary callout">
-            This is a 12 cell. It occupies 12 twelfths of the row.
+            Foundation has cells. Each row in a window has 12 cells. This is a 12 cell. It occupies 12 twelfths of the row.
           </div>
         </div>
       </div>
@@ -80,6 +96,7 @@ K21 -- Who Does Frame Work For?
             <h1>TATER TOTS</h1>
             This is another auto cell.
           </div>
+          <a class="disabled alert button">Click to Crash</a>
         </div>
       </div>
       <div class="grid-x grid-padding-x">
