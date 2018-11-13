@@ -1,3 +1,8 @@
+#Kevin Lin
+#SoftDev1 pd6
+#K 24: A RESTful Journey Skyward
+#2018-11-14
+
 import json, urllib
 from flask import Flask, render_template
 app = Flask(__name__) #Create instance of class Flask
