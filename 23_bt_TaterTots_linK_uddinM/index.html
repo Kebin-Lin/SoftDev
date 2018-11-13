@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+Kevin Lin, Mohammed Uddin
+SoftDev1 Pd6
+K23 -- How the Other Half Lives
+2018-11-13
+-->
+<html>
+  <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Shoe Buckle</title>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#home">Home</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+          <li class="nav-item"><a class="nav-link" href="#containers">Containers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
+          <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="#alerts">Alerts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tables">Tables</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div id="home">
+          <br><br><br>
+          <h1>Bootstrap Introduction</h1>
+          <h4>By Tater Tots</h4>
+          <p>
+            Everything in the page except for the navbar is in a container,
+            which adjusts the padding based on the dimensions of the window.
+          </p>
+
+          <hr id="intro">
+          <h3>Introduction</h3>
+          <p>
+            If you haven't already, Bootstrap can be added to your page using a Content Delivery Network.<br>
+            To add Bootstrap using a CDN, simply copy this line into the head of your page:
+          </p>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></xmp></pre>
+          <p>
+            An alternative to using a CDN would be to download and use a local version of the CSS sheet, but this may cause more strain on your server.<br>
+            If you want to learn more about this method, click <a href="http://getbootstrap.com/docs/4.1/getting-started/download/" target="_blank">here</a>.
+          </p>
+
+          <hr id="containers">
+          <h3>Containers</h3>
+          <p>
+            You can organize your page using Bootstrap's grid system. The grid system uses containers, rows, and columns to organize content.
+            Sample code for a container with a row and a column looks like this:
+          </p>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><div class="container">
+  <div class = "row">
+   <div class = "col-sm">
+     The "col-sm" div creates a column. The number of columns in a row is determined by the number of "col-sm" divs.
+   </div>
+ </div>
+</div></xmp></pre>
+          <p>
+            Note: The "sm" in the column refers to the minimum width of the device viewing the page. Sizes include:
+            <ul>
+              <li>"sm": Small (576px)</li>
+              <li>"md": Medium (768px)</li>
+              <li>"lg": Large (992px)</li>
+              <li>"xl": Extra large (1200px)</li>
+              <li>A minimum size is not needed and using only "col" works for all sizes</li>
+            </ul>
+            There can be a maximum of 12 columns per row, but columns can be placed inside of columns.<br>
+            If the size of a column is not specified (ex: &ltdiv class="col">&lt/div>) then the column will fill all of the avaliable space.<br>
+            If there are multiple columns without a specified size in a row, the width of the page will be split equally among them.
+          </p>
+          <div class="row">
+            <div class="border border-primary col">
+              One of three columns
+              <div class="row">
+                <div class="border border-primary col">
+                  Column inside column
+                </div>
+                <div class="border border-primary col">
+                  Column inside column
+                </div>
+              </div>
+            </div>
+            <div class="border border-primary col">
+              One of three columns
+            </div>
+            <div class="border border-primary col">
+              One of three columns
+            </div>
+          </div>
+          <div class="row">
+            <div class="border border-primary col-9">
+              Column of size 9
+            </div>
+            <div class="border border-primary col">
+              Column without size specified
+            </div>
+          </div>
+          <br>
+          <p>
+            For more information on grids, you can visit the Bootstrap documentation on grids <a href="https://getbootstrap.com/docs/4.1/layout/grid/" >here</a>
+          </p>
+
+          <hr id="buttons">
+          <h3>Buttons</h3>
+          <p>
+            Nice looking buttons can be added using Bootstrap. There are many different styles, and a button is created using this code:
+          </p>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><button type="button" class="btn btn-XXXX">Button</button></xmp></pre>
+          <p>
+            Here are the different styles of buttons available to you. To use a style, simply replace the XXXX in the code above with the style's name.
+          </p>
+          <button type="button" class="btn btn-primary">primary</button>
+          <button type="button" class="btn btn-secondary">secondary</button>
+          <button type="button" class="btn btn-success">success</button>
+          <button type="button" class="btn btn-danger">danger</button>
+          <button type="button" class="btn btn-warning">warning</button>
+          <button type="button" class="btn btn-info">info</button>
+          <button type="button" class="btn btn-light">light</button>
+          <button type="button" class="btn btn-dark">dark</button>
+          <br><br>
+          <p>
+            Keep in mind that class names are case-sensitive.
+          </p>
+          <h5>Other button styles</h5>
+          <p>
+            Note: All of these can be used in conjunction with any of the other above styles.
+          </p>
+          <h6>Outline buttons</h6>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><button type="button" class="btn btn-outline-primary">Button</button></xmp></pre>
+          <button type="button" class="btn btn-outline-primary">Button</button>
+          <br><br>
+          <h6>Disabled buttons</h6>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><button type="button" class="btn btn-secondary" disabled>Button</button></xmp></pre>
+          <button type="button" class="btn btn-secondary" disabled>Button</button><br>
+          <p>
+            The button is now disabled, but it's still clickable if someone is being sneaky and edits the HTML through their browser.
+          </p>
+          <br><br>
+          <h6>Classy buttons</h6>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><a style="color:white" class="btn btn-primary">Button</a>
+<input class="btn btn-primary" type="submit" value="Submit"></xmp></pre>
+          <a style="color:white" class="btn btn-primary">Button</a>
+          <input class="btn btn-primary" type="submit" value="Submit">
+
+          <hr id="media">
+          <h3>Media</h3>
+          <p>
+            Bootstrap can display media objects alongside text.
+          </p>
+          <div class="media">
+              <img class="mr-3" style="width:10%;height:10%;"src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
+              <div class="media-body">
+                  <h5 class="mt-0">Media heading</h5>
+                  Text is formatted next to the image automatically.
+              </div>
+          </div>
+          <p>
+            Here is the code for media formatting:
+          </p>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px;"><div class="media">
+    <img class="mr-3" style="width:10%;height:10%;"src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
+    <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Text is formatted next to the image automatically.
+    </div>
+</div></xmp></pre>
+          <hr id="alerts">
+          <h3>Alerts</h3>
+          <p>
+            Alerts can be used in Bootstrap to convey messages,such as success or warnings, to the user. Alerts have the same type/style as buttons.
+          </p>
+          <div class="alert alert-primary" role="alert"> A primary alert </div>
+          <div class="alert alert-secondary" role="alert"> A secondary alert </div>
+          <div class="alert alert-success" role="alert"> A success alert </div>
+          <div class="alert alert-danger" role="alert"> A danger alert </div>
+          <div class="alert alert-warning" role="alert"> A warning alert </div>
+          <div class="alert alert-info" role="alert"> An info alert </div>
+          <div class="alert alert-light" role="alert"> A light alert </div>
+          <div class="alert alert-dark" role="alert"> A dark alert </div>
+          <p>Basic code for an alert:</p>
+          <pre style="background-color: lightgray"><xmp> <div class="alert alert-primary">primary alert</div> </xmp></pre>
+          <p>"alert-primary" can be replaced with another alert type</p>
+
+          <hr id="tables">
+          <h3>Tables</h3>
+          <p>
+            Bootstrap tables are opt-in and are easy to customize.
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">col1</th>
+                <th scope="col">col2</th>
+                <th scope="col">col3</th>
+                <th scope="col">col4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>1.1</td>
+                <td>1.2</td>
+                <td>1.3</td>
+              </tr><tr>
+                <th scope="row">2</th>
+                <td>2.1</td>
+                <td>2.2</td>
+                <td>2.3</td>
+              </tr><tr>
+                <th scope="row">3</th>
+                <td>3.1</td>
+                <td>3.2</td>
+                <td>3.3</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px"><table class="table">
+  <thead>
+    <tr>
+      <th scope="col">col1</th>
+      <th scope="col">col2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>1.1</td>
+    </tr>
+  </tbody>
+</table></xmp></pre>
+          <h5>Table Customization</h5>
+          <p>To make a table have light text on a dark background, create the table using</p>
+          <pre style="background-color: lightgray"><xmp style="padding-left:10px"><table class="table table-dark">
+...
+</table></xmp></pre>
+          <p>Tables can be striped (rows alternate colors) by giving the table the "table-striped" class</p>
+          <p>Tables can have borders around the table and the cells by giving the table the "table-bordered" class</p>
+          <p>The table head can also be light or dark by giving the thead element the "thead-light" or "thead-dark" class</p>
+          <p>Other customization options can be found in the Bootstrap table documentation located <a href="https://getbootstrap.com/docs/4.1/content/tables/">here</a></p>
+        </div>
+      </div>
+    </body>
+</html>
