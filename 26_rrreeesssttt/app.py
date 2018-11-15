@@ -10,17 +10,14 @@ app = Flask(__name__) #Create instance of class Flask
 @app.route("/") #Assign fxn to route
 def home():
     #Gets the amount of art the API can use
-    numObjects = json.loads(urllib.request.urlopen("https://collectionapi.metmuseum.org/public/collection/v1/objects").read())["total"]
+    objList = json.loads(urllib.request.urlopen("https://collectionapi.metmuseum.org/public/collection/v1/objects").read())["objectIDs"]
     randomArt = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
     toDisplay = ""
     while True:
         #Until a displayable piece is selected, look for a new piece of art
         #Image will be squished to 200x200px
-        artUrl = randomArt + str(random.randint(1,numObjects+1))
-        try:
-            toDisplay = json.loads(urllib.request.urlopen(artUrl).read()) #Dictionary for a randomly selected piece of art
-        except:
-            continue
+        artUrl = randomArt + str(random.choice(objList))
+        toDisplay = json.loads(urllib.request.urlopen(artUrl).read()) #Dictionary for a randomly selected piece of art
         if toDisplay["primaryImage"] != "": break
 
     #Stuff to do if bored
