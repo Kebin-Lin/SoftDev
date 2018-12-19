@@ -1,3 +1,8 @@
+//Team Centigrade -- Kevin Lin and Thomas Lee
+//SoftDev1 pd6
+//K28 -- Sequential Progression
+//2018-12-19
+
 var fibonacci = function(n) {
   if (n < 2) return n;
   var a = 0;
