@@ -19,8 +19,8 @@ var fibonacci = function(n) {
 
 var gcd = function(a,b) {
   if (a == b) return a;
-  else if (a > b) return gcd(a%b,b);
-  else return gcd(b%a,a);
+  else if (a > b) return gcd(a-b,b);
+  else return gcd(b-a,a);
 };
 
 var students = ["Kevin","Thomas","Angela","Sophia"];
