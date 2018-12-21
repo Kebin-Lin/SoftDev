@@ -1,6 +1,6 @@
 //Team Centigrade -- Kevin Lin and Thomas Lee
 //SoftDev1 pd6
-//K28 -- Sequential Progression III: Season of the Witch
+//K30 -- Sequential Progression III: Season of the Witch
 //2018-12-21
 
 var addToList = function() {
